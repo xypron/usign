@@ -1,0 +1,17 @@
+Source: usign
+Maintainer: Heinrich Schuchardt <xypron.glpk@gmx.de>
+Section: utils
+Priority: extra
+Standards-Version: 3.9.4.0
+Build-Depends:
+ debhelper (>=9.0.0),
+ cmake
+Vcs-Git: https://git.lede-project.org/project/usign.git
+Vcs-Browser: https://git.lede-project.org/?p=project/usign.git;a=summary
+
+Package: usign
+Section: utils
+Architecture: any
+Depends:
+Description: usign - tiny signify replacement
+ Sign and verify files.
