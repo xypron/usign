@@ -1,0 +1,81 @@
+.\" Copyright (C) 2016, Heinrich Schuchardt <xypron.glpk@gmx.de>
+.\" and Copyright (C) 2014, Michael Kerrisk <mtk.manpages@gmail.com>
+.\"
+.\" %%%LICENSE_START(VERBATIM)
+.\" Permission is granted to make and distribute verbatim copies of this
+.\" manual provided the copyright notice and this permission notice are
+.\" preserved on all copies.
+.\"
+.\" Permission is granted to copy and distribute modified versions of
+.\" this manual under the conditions for verbatim copying, provided that
+.\" the entire resulting derived work is distributed under the terms of
+.\" a permission notice identical to this one.
+.\"
+.\" Formatted or processed versions of this manual, if unaccompanied by
+.\" the source, must acknowledge the copyright and authors of this work.
+.\" %%%LICENSE_END
+.TH usign 1 "October 18, 2016"
+.SH NAME
+usign \- tiny signify replacement
+.SH SYNOPSIS
+.BR "usign -F "( "-p "pubkey " "| " -s "seckey " "| " -x "sigfile )
+.br
+.BR "usign -G "[ "-c "comment] " -p "pubkey " -s "seckey
+.br
+.BR "usign -S "[ "-c "comment] " -m "message " -s "seckey
+.RB [ "-x "sigfile]
+.br
+.BR "usign -V -m "message " "( "-p "pubkey " "| " -P "pubkeydir)
+.RB [ "-q:]
+.RB [ "-x "sigfile]
+.SH DESCRIPTION
+The
+.B usign
+command is used to generate and verify cryptographic signatures.
+The operation to be executed is specified by one of the following options:
+.TP
+.B -F
+Generate a fingerprint of the public key.
+.TP
+.B -G
+Generate a key pair with a secret and a public key.
+.TP
+.B -S
+Sign a message with a secret key.
+A signature file is generated.
+If the name of the signature file is not specified \'.sig\'
+is appended to the name of the message file.
+.TP
+.B -V
+Verify a message.
+.PP
+The other options are
+.TP
+.B -c
+This option specifies a comment that is written to the first line of the
+output file(s)
+.TP
+.B -m
+This option specifies the message file that is to be signed or verified.
+.TP
+.B -p
+This option specifies the public key file.
+.TP
+.B -P
+This option specifies a directory with public key files.
+The name of the actual file used is the fingerprint of the public key used
+for the signature.
+.TP
+.B -q:
+This option supresses output.
+The verification result is only signaled by the return code.
+.TP
+.B -s
+This option specifies the file with the secret key.
+.TP
+.B -x
+This option specifies the file with the signature.
+.PP
+.SH REPORTING BUGS
+Report bugs using the issue tracker at
+https://bugs.lede-project.org/.
