@@ -1,3 +1,9 @@
+usign (1.2) unstable; urgency=medium
+
+  * Add a man page.
+
+ -- Heinrich Schuchardt <xypron.glpk@gmx.de>  Sun, 23 Oct 2016 15:35:31 +0200
+
 usign (1.1) unstable; urgency=medium
 
   * Initial release.
